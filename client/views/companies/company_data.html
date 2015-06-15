@@ -1,0 +1,47 @@
+<template name="company_data">
+    <div class="container company_data">
+        <div class="title">Company Data</div>
+        <div class="company_details">
+            {{#with company}}
+                <div class="item">Ticker: {{ticker}}</div>
+                <div class="item">Company Name: {{name}}</div>
+                <div class="item">Market: <a href="{{quoteLink}}">{{market}}</a></div>
+                <div class="item">Headquarters: {{headquarters}}</div>
+                <div class="item">GICS Sector: {{gicsSector}}</div>
+                <div class="item">GICS Sub-Industry: {{gicsSubIndustry}}</div>
+                <div class="item"><a href="{{secFilingsLink}}">SEC Filings</a></div>
+                <div class="item">CIK: {{cik}}</div>
+                <div class="item">Date First Added: {{dateFirstAdded}}</div>
+            {{/with}}
+            <div class="sector item">
+                Sector companies:
+                {{#each sectorCompanies}}
+                    <span class="item"><a href="/company/{{ticker}}">{{ticker}}</a></span>
+                {{/each}}
+            </div>
+            <div class="industry item">
+                Industry companies:
+                {{#each industryCompanies}}
+                    <span class="item"><a href="/company/{{ticker}}">{{ticker}}</a></span>
+                {{/each}}
+            </div>
+        </div>
+        <div class="metadata financials">
+            <div class="title">Financials</div>
+            <table>
+                <tr class="fin header">
+                    {{#each financialsHeaders}}
+                        <th class="fin header"><a href="{{link}}">{{text}}</a></th>
+                    {{/each}}
+                </tr>
+                {{#each financials}}
+                    <tr class="fin data">
+                        {{#each value}}
+                            <td class="fin data"><a href="{{link}}">{{text}}</a></td>
+                        {{/each}}
+                    </tr>
+                {{/each}}
+            </table>
+        </div>
+    </div>
+</template>

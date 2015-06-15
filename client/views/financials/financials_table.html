@@ -1,0 +1,19 @@
+<template name="financials_table">
+    <div class="container financials_data">
+        <div class="title">Financials: {{financialsType}}</div>
+        <div class="company_details item">
+            <div class="item">Ticker: {{ticker}}</div>
+        </div>
+        <div class="data financials">
+            <table>
+                {{#each rows}}
+                    <tr>
+                        {{#each value}}
+                            {{{cellValue}}}
+                        {{/each}}
+                    </tr>
+                {{/each}}
+            </table>
+        </div>
+    </div>
+</template>

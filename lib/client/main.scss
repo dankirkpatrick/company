@@ -1,0 +1,65 @@
+@import "mixins";
+
+@import "colors";
+@import "grid";
+@import "header";
+@import "links";
+@import "mobile_nav";
+@import "nav";
+@import "typography";
+
+body {
+  background: teal;
+}
+
+div.container {
+  margin: 50px;
+  padding: 25px;
+  background: white;
+  border-radius: 5px;
+}
+
+div.title {
+  font-size: 200%;
+  text-align: center;
+  padding-bottom: 15px;
+}
+
+div.item {
+  margin-bottom: 5px;
+}
+
+div.metadata {
+  border-radius: 5px;
+  margin: 50px;
+  padding: 20px;
+  background: beige;
+}
+
+div.company_details {
+  text-align: left;
+  margin-bottom: 10px;
+}
+
+div.data {
+  margin: 25px 50px 0;
+  border-radius: 5px;
+  padding: 20px;
+  background: beige;
+}
+
+td {
+  border: 1px dotted black;
+}
+
+td.data {
+  padding: 2px;
+}
+
+tr.hilite, td.hilite {
+  border-top: 3px double black;
+}
+
+.bld {
+  font-weight: bold;
+}

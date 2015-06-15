@@ -1,0 +1,20 @@
+<template name="financials_data">
+    <div class="container financials_data">
+        <div class="title">Financials: {{financialsType}}</div>
+        <div class="company_details item">
+            <div class="item">Ticker: {{ticker}}</div>
+            <div class="item">Scale: {{scale}}</div>
+        </div>
+        <div class="data financials">
+            <div class="title">{{asOfDate}}</div>
+            <table>
+                {{#each data}}
+                    <tr class="fin data {{modifiers}}">
+                        <td class="fin data {{modifiers}}">{{label}}</td>
+                        <td class="fin data {{modifiers}}">{{value}}</td>
+                    </tr>
+                {{/each}}
+            </table>
+        </div>
+    </div>
+</template>
