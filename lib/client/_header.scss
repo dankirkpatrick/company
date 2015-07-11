@@ -1,5 +1,8 @@
 $mobile-header-height: 50px;
 
+tr.header {
+  padding: 0;
+}
 .header{
   background: $dark-grey;
   margin-bottom: $grid-margin;
